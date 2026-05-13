@@ -56,7 +56,11 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+I have created two ERDs visualizing the architectures.
+
+For type 1, retaining changes, first, there is an additional boolean attribute, current_address, to highlight the current address, and second, there is a 1-to-many relationship between customer and customer_address entities, showing that a customer can have 1 to many addresses.
+
+For type 2, overwriting address, first, there is no such a current_address attribute. Second, there is a 1-to-1 relataionship between customer and customer_address entities, forcing the database to capture one, and only one address for each customer.
 ```
 
 ***
